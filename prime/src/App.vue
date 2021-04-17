@@ -1,19 +1,40 @@
 <template>
-  <div id="app">
+  <div>
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <div class="" v-for="movies, key in movies" :key="key">
+      <MovieList :titulo="movies.name" :descricao="movies.overview"/>
+    </div>
+    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Tmdb from './API/Tmdb'
+import MovieList from './components/MoviesList'  
 
 export default {
+
+  data(){
+    return {
+      movies: []
+    }
+  },
+  created(){
+    Tmdb.getAllMovies('/discover/tv?with_network=213&language=pt-BR&api_key=', movies =>{
+      this.movies = JSON.parse(JSON.stringify(movies.data.results)); 
+      console.log( this.movies);
+    })
+  },
   name: 'App',
+
   components: {
-    HelloWorld
-  }
+    MovieList
+  },
+
 }
+
 </script>
 
 <style>
