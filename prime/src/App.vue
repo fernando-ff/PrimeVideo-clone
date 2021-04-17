@@ -1,31 +1,36 @@
 <template>
-  <div id="app">
+  <div>
     <img alt="Vue logo" src="./assets/logo.png">
-    <div class="movies" v-for="(movies, index) in movies" :key="index">
-       <div>{{movies}}</div>
+
+    <div class="" v-for="movies, key in movies" :key="key">
+      <MovieList :titulo="movies.name" :descricao="movies.overview"/>
     </div>
+    
   </div>
 </template>
 
 <script>
-import getHomeList from './API/Tmdb'
+
+import Tmdb from './API/Tmdb'
+import MovieList from './components/MoviesList'  
+
 export default {
+
   data(){
     return {
       movies: []
     }
   },
-  async mounted(){
-
-    await getHomeList.getHomeList().then(res => { console.log(res) });
-    console.log(this.movies)
-
-   
-
+  created(){
+    Tmdb.getAllMovies('/discover/tv?with_network=213&language=pt-BR&api_key=', movies =>{
+      this.movies = JSON.parse(JSON.stringify(movies.data.results)); 
+      console.log( this.movies);
+    })
   },
   name: 'App',
-  components: {
 
+  components: {
+    MovieList
   },
 
 }
