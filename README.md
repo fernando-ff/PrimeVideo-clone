@@ -39,15 +39,14 @@
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">Author</a>
 </p>
 
 <br>
 
 ## :dart: About ##
 
-Describe your project
+This project have a education end.
+He's was made by students of the federal university of Rn
 
 ## :sparkles: Features ##
 
@@ -84,12 +83,9 @@ $ npm start
 # The server will initialize in the <http://localhost:3000>
 ```
 
-## :memo: License ##
+## :memo: Authors ##
 
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
-
-
-Made with :heart: by <a href="https://github.com/fernando-ff" target="_blank">Fernando Ferreira</a>
+Made with :heart: by <a href="https://github.com/fernando-ff" target="_blank">Fernando Ferreira</a>,
 <a href="https://github.com/Thauanny" target="_blank">Thauany</a>
 
 &#xa0;
