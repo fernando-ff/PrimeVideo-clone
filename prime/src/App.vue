@@ -1,19 +1,35 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="movies" v-for="(movies, index) in movies" :key="index">
+       <div>{{movies}}</div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import getHomeList from './API/Tmdb'
 export default {
+  data(){
+    return {
+      movies: []
+    }
+  },
+  async mounted(){
+
+    await getHomeList.getHomeList().then(res => { console.log(res) });
+    console.log(this.movies)
+
+   
+
+  },
   name: 'App',
   components: {
-    HelloWorld
-  }
+
+  },
+
 }
+
 </script>
 
 <style>
