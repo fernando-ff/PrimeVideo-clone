@@ -1,11 +1,5 @@
 <template>
-   <div id="app">
-    
-    <div class="movies">
-       <div>{{titulo}}</div>
-       <div>{{descricao}}</div>
-    </div>
-  </div>
+    <img :src="imagem" alt="Capa do filme">
 </template>
 
 <script>
@@ -17,20 +11,18 @@ export default {
     name: 'MovieList',
 
     props: {
-
-        titulo:{    
-            type: String,
-            required: true,
-
+        
+        imagem: {
+            type: String
         },
-        descricao: {
-            type: String,
-        }
+       
     }
 
 }
 </script>
 
 <style>
+
+
 
 </style>
