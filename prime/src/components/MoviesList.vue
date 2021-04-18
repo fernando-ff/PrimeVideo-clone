@@ -11,6 +11,7 @@
                 <img :src="imagem" alt="Capa do filme">
             </div>
             <div class="container-overview">
+                <h3 class="container-overview-title">{{ title }}</h3>
                 <p>{{ overview }}</p>
             </div>
         </div>
@@ -27,6 +28,9 @@ export default {
             type: String
         },
         overview:{
+            type:String
+        },
+        title:{
             type:String
         }
     },
@@ -46,13 +50,13 @@ export default {
         margin: 0 4px;
         
         border-radius: 4px;
-        transition: ease 0.1s;
+        transition: ease 0.2s;
         z-index: 1;
     }
     .container:hover{
         transform: scale(1.08);
-        border: solid blue;
-        z-index: 50;
+        border: solid #0195c8;
+        z-index: 40;
     }
     .prime-logo-container{
         position: absolute;
@@ -76,7 +80,7 @@ export default {
     }
     .prime-logo {
         position: relative;
-        background: blue;
+        background: #0195c8;
         color: black;
         width: 100%;
         height: 18px;
@@ -100,6 +104,7 @@ export default {
     .container-img img{
        width: 100%; 
        height: 100%;
+
     }
     .container-overview{
         display: none;
@@ -107,9 +112,15 @@ export default {
     .container:hover .container-overview {
         display: block;
         width: 100%;
-        padding: 8px;
-        font-size: 14px;
+        font-size: 12px;
         background: #293443;
+        padding: 24px;
+        background-image: linear-gradient(270deg, #ffff8f 0, #fffc5d 25%, #f8d110 50%, #d6a700 75%, #ba8300 100%);        display: block;
+        z-index: 50;
+    }
+    .container-overview-title {
+        margin-bottom: 18px;
+        font-weight: bold;
     }
 
 

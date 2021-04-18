@@ -5,55 +5,91 @@
         <!-- <div class="movies-list"> -->
           <div class="movies-item">
             <div v-for="(movies, index) in movies_originals" :key="index">
-              <MovieList :imagem="getImagem(movies.poster_path)" :overview="movies.overview"/>
+              <MovieList 
+                :imagem="getImagem(movies.poster_path)" 
+                :overview="movies.overview"
+                :title="movies.title"  
+              />
             </div>
          </div>
           <h4 class="titles">Amazon Originals e exclusivos</h4>
           <div class="movies-item">
             <div v-for="(movies, index) in movies_week" :key="'a'+index">
-              <MovieList :imagem="getImagem(movies.poster_path)" :overview="movies.overview"/>
+              <MovieList 
+                :imagem="getImagem(movies.poster_path)" 
+                :overview="movies.overview"
+                :title="movies.title"
+              />
             </div>
           </div>
           <h4 class="titles">Filmes recomendados</h4>
           <div class="movies-item">
             <div  v-for="(movies, index) in movies_topRated" :key="'b'+index">
-              <MovieList :imagem="getImagem(movies.poster_path)" :overview="movies.overview"/>
+              <MovieList 
+                :imagem="getImagem(movies.poster_path)" 
+                :overview="movies.overview"
+                :title="movies.title"
+              />
             </div>
           </div>
           <h4 class="titles">Filmes de Ação</h4>
           <div class="movies-item">
             <div v-for="(movies, index) in movies_action" :key="'c'+index">
-              <MovieList :imagem="getImagem(movies.poster_path)" :overview="movies.overview"/>
+              <MovieList 
+                :imagem="getImagem(movies.poster_path)" 
+                :overview="movies.overview"
+                :title="movies.title"
+              />
             </div>
           </div>
           <h4 class="titles">Filmes de Comédia</h4>
           <div class="movies-item">
             <div class="movies-item" v-for="(movies, index) in movies_comedy" :key="'d'+index">
-              <MovieList :imagem="getImagem(movies.poster_path)" :overview="movies.overview"/>
+              <MovieList 
+                :imagem="getImagem(movies.poster_path)" 
+                :overview="movies.overview"
+                :title="movies.title"
+              />
             </div>
           </div>
           <h4 class="titles">Filmes de Terror</h4>
           <div class="movies-item">
             <div v-for="(movies, index) in movies_terror" :key="'e'+index">
-              <MovieList :imagem="getImagem(movies.poster_path)" :overview="movies.overview"/>
+              <MovieList 
+                :imagem="getImagem(movies.poster_path)" 
+                :overview="movies.overview"
+                :title="movies.title"
+              />
             </div>
           </div>
           <h4 class="titles">Filmes de Documentário</h4>
           <div class="movies-item">
             <div v-for="(movies, index) in movies_documentary" :key="'f'+index">
-              <MovieList :imagem="getImagem(movies.poster_path)" :overview="movies.overview"/>
+              <MovieList 
+                :imagem="getImagem(movies.poster_path)" 
+                :overview="movies.overview"
+                :title="movies.title"
+              />
             </div>
           </div>
           <h4 class="titles">Filmes de Ficção</h4>
           <div class="movies-item">
             <div v-for="(movies, index) in movies_ficion" :key="'g'+index">
-              <MovieList :imagem="getImagem(movies.poster_path)" :overview="movies.overview"/>
+              <MovieList 
+                :imagem="getImagem(movies.poster_path)" 
+                :overview="movies.overview"
+                :title="movies.title"
+              />
             </div>
           </div>
           <h4 class="titles">Filmes de Romance</h4>
           <div class="movies-item">
             <div v-for="(movies, index) in movies_romance" :key="'h'+index">
-              <MovieList :imagem="getImagem(movies.poster_path)" :overview="movies.overview"/>
+              <MovieList 
+                :imagem="getImagem(movies.poster_path)" 
+                :overview="movies.overview"
+                :title="movies.title"
+              />
             </div>
           </div> 
         </div>
@@ -98,7 +134,7 @@ export default {
     })
     Tmdb.getMovies('/discover/movie?with_genres=878&language=pt-BR&api_key=', movies =>{ this.movies_ficion = JSON.parse(JSON.stringify(movies.data.results));  
     })
-    Tmdb.getMovies('/discover/movie?with_genres=10749&language=pt-BR&api_key=', movies =>{ this.movies_romance = JSON.parse(JSON.stringify(movies.data.results));
+    Tmdb.getMovies('/discover/movie?with_genres=10749&language=pt-BR&api_key=', movies =>{ this.movies_romance = JSON.parse(JSON.stringify(movies.data.results)), console.log(this.movies_romance)
     })
     },
     methods: {
