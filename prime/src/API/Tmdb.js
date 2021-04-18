@@ -6,11 +6,11 @@ const API_BASE = "https://api.themoviedb.org/3";
 
 
 export default {
-    getAllMovies: async (url, callback) => {
+    getMovies: async (url, callback) => {
         const urlMovies = API_BASE + url + API_KEY ;
-        await axios.get(urlMovies).then((res) => {
+        axios.get(urlMovies).then((res) => {
             if(callback){
-                callback(JSON.parse(JSON.stringify(res)));
+                callback(JSON.parse(JSON.stringify(res)) );
             }
         })
     }
