@@ -11,8 +11,10 @@
                 <img :src="imagem" alt="Capa do filme">
             </div>
             <div class="container-overview">
+                <h4 class="prime-included">Incluído no Prime</h4>
+                <br>
                 <h3 class="container-overview-title">{{ title }}</h3>
-                <p>{{ overview }}</p>
+                <p class="container-overview-desc">{{ overview }}</p>
             </div>
         </div>
 </template>
@@ -102,6 +104,7 @@ export default {
         height: 183px;
     }
     .container-img img{
+       object-fit: cover;
        width: 100%; 
        height: 100%;
 
@@ -112,17 +115,28 @@ export default {
     .container:hover .container-overview {
         display: block;
         width: 100%;
+        height: 150px;
         font-size: 12px;
         background: #293443;
         padding: 24px;
-        background-image: linear-gradient(270deg, #ffff8f 0, #fffc5d 25%, #f8d110 50%, #d6a700 75%, #ba8300 100%);        display: block;
+        display: block;
         z-index: 50;
+        
     }
     .container-overview-title {
         margin-bottom: 18px;
         font-weight: bold;
     }
 
+    .container-overview-desc{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .prime-included{
+        color: #0195c8;;
+    }
 
 
 </style>
