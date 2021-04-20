@@ -7,6 +7,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="container-img">
                 <img :src="imagem" alt="Capa do filme">
             </div>
@@ -59,6 +60,8 @@ export default {
         transform: scale(1.08);
         border: solid #0195c8;
         z-index: 40;
+        
+        
     }
     .prime-logo-container{
         position: absolute;
@@ -99,16 +102,20 @@ export default {
         font-size: 12px;
         font-weight: bold;
     }
+    .test{ background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0));}
     .container-img {
         width: 100%;
         height: 183px;
+        
     }
     .container-img img{
-       object-fit: cover;
+
        width: 100%; 
        height: 100%;
-
     }
+
+
+    
     .container-overview{
         display: none;
     }
@@ -121,6 +128,7 @@ export default {
         padding: 24px;
         display: block;
         z-index: 50;
+        
         
     }
     .container-overview-title {
