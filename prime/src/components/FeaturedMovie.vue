@@ -24,26 +24,26 @@ export default {
         return {
             slides: [
                 {
-                    image: 'https://image.tmdb.org/t/p/original/6UH52Fmau8RPsMAbQbjwN3wJSCj.jpg'
+                    image: 'https://m.media-amazon.com/images/S/sonata-images-prod/SVOD_ROW_HorizonLine/be6726a9-620b-468d-88c4-01a7df2cd7d2._UR3000,600_SX1500_FMjpg_.jpeg'
                 
                 },
                 {
-                    image: 'https://image.tmdb.org/t/p/original/b0WmHGc8LHTdGCVzxRb3IBMur57.jpg'
+                    image: 'https://m.media-amazon.com/images/G/01/digital/video/sonata/svod_row_sh_knivesout/005b9bed-8ea0-4036-a160-6376a1e4e8d2._UR3000,600_SX1500_FMjpg_.jpg'
                 },
                 {
-                    image: 'https://image.tmdb.org/t/p/original/dIWwZW7dJJtqC6CgWzYkNVKIUm8.jpg'
+                    image: 'https://m.media-amazon.com/images/S/sonata-images-prod/CROW_BR_Paramount_BabyDriver/f12bef91-b6c8-4bce-b621-73864b1a8e2b._UR3000,600_SX1500_FMjpg_.jpeg'
                 },
                 {
-                    image: 'https://image.tmdb.org/t/p/original//88J6waYVTta8Qz3iX3qUeWNA5d5.jpg'
+                    image: 'https://m.media-amazon.com/images/S/sonata-images-prod/SVOD_ROW_Ma/fe624676-a7fd-44df-b2c1-7564aef07536._UR3000,600_SX1500_FMjpg_.jpg'
                 },
                 {
-                    image: 'https://image.tmdb.org/t/p/original/uro2Khv7JxlzXtLb8tCIbRhkb9E.jpg'
+                    image: 'https://m.media-amazon.com/images/S/sonata-images-prod/CROW_BR_Starzplay_Multititle_DHATLWH/f4014c49-8076-41a9-867e-35952550592f._UR3000,600_SX1500_FMjpg_.jpg'
                 },
                 {
-                    image: 'https://image.tmdb.org/t/p/original/57vVjteucIF3bGnZj6PmaoJRScw.jpg'
+                    image: 'https://m.media-amazon.com/images/G/01/digital/video/sonata/gl2_downsizing/32297523-63d5-4ef7-9e5e-7d84cf8f7138._UR3000,600_SX1500_FMjpg_.jpg'
                 },
                 {
-                    image: 'https://image.tmdb.org/t/p/original/7prYzufdIOy1KCTZKVWpjBFqqNr.jpg'
+                    image: 'https://m.media-amazon.com/images/S/sonata-images-prod/CROW_BR_Starzplay_TheStand/a539f5b0-ca08-473c-8240-9e96dfdd819d._UR3000,600_SX1500_FMjpg_.jpg'
                 }
                 
             ],
