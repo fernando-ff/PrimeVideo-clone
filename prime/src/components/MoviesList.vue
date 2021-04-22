@@ -23,6 +23,8 @@
 <script>
 export default {
 
+
+
     name: 'MovieList',
 
     props: {
@@ -38,8 +40,6 @@ export default {
         }
     },
 
-
-
 }
 </script>
 
@@ -51,7 +51,7 @@ export default {
         width: 327px;
         
         margin: 0 4px;
-        
+        margin-top: 5px;   
         border-radius: 4px;
         transition: ease 0.2s;
         z-index: 1;
@@ -104,27 +104,29 @@ export default {
     }
     .test{ background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0));}
     .container-img {
+        
         width: 100%;
         height: 183px;
         
     }
     .container-img img{
-
-       width: 100%; 
-       height: 100%;
+        object-fit: cover;
+        width: 100%; 
+        height: 100%;
     }
 
 
     
     .container-overview{
         display: none;
+        
     }
     .container:hover .container-overview {
-        display: block;
+        
         width: 100%;
-        height: 150px;
+        height: 180px;
         font-size: 12px;
-        background: #293443;
+        background: #1b2530 ;
         padding: 24px;
         display: block;
         z-index: 50;
@@ -137,9 +139,13 @@ export default {
     }
 
     .container-overview-desc{
+        margin-top: -16px;
         overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        max-height: 48px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+            
     }
 
     .prime-included{

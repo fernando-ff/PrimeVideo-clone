@@ -7,12 +7,13 @@
     <section :style="{
       'height': '8vh',
     }">
+
      
     </section>
 
 
     <section>
-      <FeaturedMovie :imagem=" 'https://image.tmdb.org/t/p/original' + this.movies_originals[getRandom(this.movies_originals)].backdrop_path"/>
+      <FeaturedMovie :imagem=" 'https://image.tmdb.org/t/p/original' " :array="movies_originals"/>
     </section>
 
     <section class="movieArea">
@@ -22,14 +23,14 @@
               <div v-for="(movies, index) in movies_originals" :key="index">
                 <div v-if="movies.title === undefined">
                   <MovieList 
-                    :imagem="getImagem(movies.backdrop_path)" 
+                    :imagem="getImagem(movies.poster_path)" 
                     :overview="movies.overview"
                     :title="movies.name"
                   />
                 </div>
                 <div v-else>
                   <MovieList 
-                    :imagem="getImagem(movies.backdrop_path)" 
+                    :imagem="getImagem(movies.poster_path)" 
                     :overview="movies.overview"
                     :title="movies.title"
                   />
@@ -41,14 +42,14 @@
               <div v-for="(movies, index) in movies_week" :key="'a'+index">
                 <div v-if="movies.title === undefined">
                   <MovieList 
-                    :imagem="getImagem(movies.backdrop_path)" 
+                    :imagem="getImagem(movies.poster_path)" 
                     :overview="movies.overview"
                     :title="movies.name"
                   />
                 </div>
                 <div v-else>
                   <MovieList 
-                    :imagem="getImagem(movies.backdrop_path)" 
+                    :imagem="getImagem(movies.poster_path)" 
                     :overview="movies.overview"
                     :title="movies.title"
                   />
@@ -60,14 +61,14 @@
               <div  v-for="(movies, index) in movies_topRated" :key="'b'+index">
                 <div v-if="movies.title === undefined">
                   <MovieList 
-                    :imagem="getImagem(movies.backdrop_path)" 
+                    :imagem="getImagem(movies.poster_path)" 
                     :overview="movies.overview"
                     :title="movies.name"
                   />
                 </div>
                 <div v-else>
                   <MovieList 
-                    :imagem="getImagem(movies.backdrop_path)" 
+                    :imagem="getImagem(movies.poster_path)" 
                     :overview="movies.overview"
                     :title="movies.title"
                   />
@@ -80,14 +81,14 @@
                 <div v-if="movies.title === undefined">
                   <div v-if="movies.title === undefined">
                     <MovieList 
-                      :imagem="getImagem(movies.backdrop_path)" 
+                      :imagem="getImagem(movies.poster_path)" 
                       :overview="movies.overview"
                       :title="movies.name"
                     />
                   </div>
                   <div v-else>
                     <MovieList 
-                      :imagem="getImagem(movies.backdrop_path)" 
+                      :imagem="getImagem(movies.poster_path)" 
                       :overview="movies.overview"
                       :title="movies.title"
                     />
@@ -96,14 +97,14 @@
                 <div v-else>
                 <div v-if="movies.title === undefined">
                   <MovieList 
-                    :imagem="getImagem(movies.backdrop_path)" 
+                    :imagem="getImagem(movies.poster_path)" 
                     :overview="movies.overview"
                     :title="movies.name"
                   />
                 </div>
                 <div v-else>
                   <MovieList 
-                    :imagem="getImagem(movies.backdrop_path)" 
+                    :imagem="getImagem(movies.poster_path)" 
                     :overview="movies.overview"
                     :title="movies.title"
                   />
@@ -116,14 +117,14 @@
               <div class="movies-item" v-for="(movies, index) in movies_comedy" :key="'d'+index">
                 <div v-if="movies.title === undefined">
                   <MovieList 
-                    :imagem="getImagem(movies.backdrop_path)" 
+                    :imagem="getImagem(movies.poster_path)" 
                     :overview="movies.overview"
                     :title="movies.name"
                   />
                 </div>
                 <div v-else>
                   <MovieList 
-                    :imagem="getImagem(movies.backdrop_path)" 
+                    :imagem="getImagem(movies.poster_path)" 
                     :overview="movies.overview"
                     :title="movies.title"
                   />
@@ -135,14 +136,14 @@
               <div v-for="(movies, index) in movies_terror" :key="'e'+index">
                 <div v-if="movies.title === undefined">
                   <MovieList 
-                    :imagem="getImagem(movies.backdrop_path)" 
+                    :imagem="getImagem(movies.poster_path)" 
                     :overview="movies.overview"
                     :title="movies.name"
                   />
                 </div>
                 <div v-else>
                   <MovieList 
-                    :imagem="getImagem(movies.backdrop_path)" 
+                    :imagem="getImagem(movies.poster_path)" 
                     :overview="movies.overview"
                     :title="movies.title"
                   />
@@ -154,14 +155,14 @@
               <div v-for="(movies, index) in movies_documentary" :key="'f'+index">
                 <div v-if="movies.title === undefined">
                   <MovieList 
-                    :imagem="getImagem(movies.backdrop_path)" 
+                    :imagem="getImagem(movies.poster_path)" 
                     :overview="movies.overview"
                     :title="movies.name"
                   />
                 </div>
                 <div v-else>
                   <MovieList 
-                    :imagem="getImagem(movies.backdrop_path)" 
+                    :imagem="getImagem(movies.poster_path)" 
                     :overview="movies.overview"
                     :title="movies.title"
                   />
@@ -173,14 +174,14 @@
               <div v-for="(movies, index) in movies_ficion" :key="'g'+index">
                 <div v-if="movies.title === undefined">
                   <MovieList 
-                    :imagem="getImagem(movies.backdrop_path)" 
+                    :imagem="getImagem(movies.poster_path)" 
                     :overview="movies.overview"
                     :title="movies.name"
                   />
                 </div>
                 <div v-else>
                   <MovieList 
-                    :imagem="getImagem(movies.backdrop_path)" 
+                    :imagem="getImagem(movies.poster_path)" 
                     :overview="movies.overview"
                     :title="movies.title"
                   />
@@ -191,7 +192,7 @@
             <div class="movies-item">
               <div v-for="(movies, index) in movies_romance" :key="'h'+index">
                 <MovieList 
-                  :imagem="getImagem(movies.backdrop_path)" 
+                  :imagem="getImagem(movies.poster_path)" 
                   :overview="movies.overview"
                   :title="movies.title"
                 />
@@ -208,6 +209,7 @@
 import Tmdb from './API/Tmdb'
 import MovieList from './components/MoviesList'  
 import FeaturedMovie from './components/FeaturedMovie' 
+
 
 export default {
 
@@ -228,11 +230,11 @@ export default {
   },
   created(){
     Tmdb.getMovies('/discover/tv?with_network=213&language=pt-BR&api_key=', movies =>{ this.movies_originals = JSON.parse(JSON.stringify(movies.data.results)); 
-    console.log(this.movies_originals)})
+    console.log(movies.data.results)})
     Tmdb.getMovies('/trending/all/week?&language=pt-BR&api_key=', movies =>{ this.movies_week = JSON.parse(JSON.stringify(movies.data.results)); 
-    })
+    console.log(movies.data.results)})
     Tmdb.getMovies('/movie/top_rated?&language=pt-BR&api_key=', movies =>{ this.movies_topRated = JSON.parse(JSON.stringify(movies.data.results));   
-    })
+    console.log(movies.data.results)})
     Tmdb.getMovies('/discover/movie?with_genres=28&language=pt-BR&api_key=', movies =>{ this.movies_action = JSON.parse(JSON.stringify(movies.data.results)); 
     })
     Tmdb.getMovies('/discover/movie?with_genres=35&language=pt-BR&api_key=', movies =>{ this.movies_comedy = JSON.parse(JSON.stringify(movies.data.results));  
@@ -254,18 +256,13 @@ export default {
         
   
       },
-      getRandom: function(movies){
-        console.log(Math.floor(Math.random() * (movies.length)));
-        return Math.floor(Math.random() * (movies.length));
-        
-      }
-      
+
   },
   name: 'App',
 
   components: {
     MovieList,
-    FeaturedMovie
+    FeaturedMovie,
   },
 
 }
@@ -284,7 +281,7 @@ export default {
 }
 
 body{
-  background-color: #13181f;
+  background-color: #0f171e;
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
   color: #fff;
