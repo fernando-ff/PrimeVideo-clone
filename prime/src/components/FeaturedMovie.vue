@@ -1,26 +1,27 @@
 <template>
-
     <div class="featured">
-       
-        <vueper-slides fixed-height="true" arrows-outside bullets-outside slide-image-inside autoplay>
+        <vueper-slides infinite="true" fixed-height="true"  slide-image-inside autoplay>
             <vueper-slide v-for="(slide, i) in slides" :key="i"  :image="slide.image"  />
         </vueper-slides>
-        
-      
     </div>
-
 </template>
-
 <script>
 import 'vueperslides/dist/vueperslides.css'
 import { VueperSlides, VueperSlide } from 'vueperslides'
-
-
 export default {
-
-
-    data(){
-           
+    name: 'FeaturedMovie',
+    components:{
+        VueperSlides, VueperSlide
+    },
+    props: {
+        imagem: {
+            type: String
+        },
+        array: {
+            type: Array
+        }
+    },
+    data(){    
         return {
             slides: [
                 {
@@ -48,65 +49,28 @@ export default {
                 
             ],
         }
-
-        
     },
-    
-    mounted (){
-        
-    },
-
     methods: {
-        getRandom: function(array){
-            
+        getRandom(array){  
         return Math.floor(Math.random() * (array.length));  
-        
-      },
-
-      toObject: function(){
-
-      }
-      
+      }, 
     },
-
-    name: 'FeaturedMovie',
-
-    props: {
-        
-        imagem: {
-            type: String
-
-        },
-        array: {
-            type: Array
-        }
-    },
-    
-    components:{
-        VueperSlides, VueperSlide
-      
-    },
-
-
 }
 </script>
 
-<style>
+<style scoped>
 .featured{
-    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-
-    margin-left: 4.5vw;
-    margin-bottom: 100px;
 }
 
-
-
-.vueperslides--fixed-height { height: 35vh; width: 90%;}
-
+.vueperslides--fixed-height { 
+    height: 35vh;
+     width: 100%;
+}
 .vueperslide__image {
     object-fit: contain;
 }
-
-
 </style>

@@ -7,9 +7,8 @@
                     </div>
                 </div>
             </div>
-
-            <div class="container-img">
-                <img :src="imagem" alt="Capa do filme">
+            <div :style="cssProps" class="container-img">
+                <!-- <img :src="imagem" alt="Capa do filme"> -->
             </div>
             <div class="container-overview">
                 <h4 class="prime-included">Incluído no Prime</h4>
@@ -19,18 +18,12 @@
             </div>
         </div>
 </template>
-
 <script>
 export default {
-
-
-
-    name: 'MovieList',
-
-    props: {
-        
+    name: 'Card',
+    props: { 
         imagem: {
-            type: String
+            type: String,
         },
         overview:{
             type:String
@@ -39,29 +32,34 @@ export default {
             type:String
         }
     },
-
+    data(){
+        return{
+            cssProps: {
+                backgroundImage: `url(${this.imagem})`
+            }
+        }
+    }
+    
 }
 </script>
-
 <style scoped>
     .container{
         overflow: hidden;
         position: relative;
         
-        width: 327px;
+        width: 280px;
         
         margin: 0 4px;
         margin-top: 5px;   
-        border-radius: 4px;
-        transition: ease 0.2s;
+        transition: ease 0.48s;
         z-index: 1;
+        border-radius: 2px;
     }
     .container:hover{
         transform: scale(1.08);
-        border: solid #0195c8;
-        z-index: 40;
-        
-        
+        border: solid #0195c8 2px;
+        border-radius: 4px;
+        z-index: 40;  
     }
     .prime-logo-container{
         position: absolute;
@@ -102,21 +100,20 @@ export default {
         font-size: 12px;
         font-weight: bold;
     }
-    .test{ background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0));}
+    .test{ 
+        background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0));
+    }
     .container-img {
-        
         width: 100%;
         height: 183px;
-        
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     .container-img img{
-        object-fit: cover;
         width: 100%; 
         height: 100%;
     }
-
-
-    
     .container-overview{
         display: none;
         
@@ -137,7 +134,6 @@ export default {
         margin-bottom: 18px;
         font-weight: bold;
     }
-
     .container-overview-desc{
         margin-top: -16px;
         overflow: hidden;
@@ -147,10 +143,7 @@ export default {
         -webkit-line-clamp: 3;
             
     }
-
     .prime-included{
-        color: #0195c8;;
+        color: #0195c8;
     }
-
-
 </style>
