@@ -1,5 +1,6 @@
 <template lang="pt-br">
   <section>
+    <Header/>
     <FeaturedMovie :imagem=" 'https://image.tmdb.org/t/p/original' " :array="movies_originals"/>
     <MovieList />
   </section>
@@ -8,9 +9,11 @@
 <script>
 import MovieList from './components/MovieList';
 import FeaturedMovie from './components/FeaturedMovie';
+import Header from './components/Header';
 export default {
   name: 'App',
   components: {
+    Header,
     MovieList,
     FeaturedMovie,
   },

@@ -60,6 +60,7 @@ export default {
 
 <style scoped>
 .featured{
+    margin-top: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
